@@ -93,39 +93,48 @@ Technology leader with experience spanning enterprise data architecture, AI and 
 
 #### Consultant | Jun 2018–Dec 2018
 
-**Known themes**
+**Draft achievement bank**
 
-- Banking transaction, SWIFT, and CHIPS message analytics
-- Python-based data validation and extraction from core banking systems
-- Reusable Python assessment and SQL-generation module
-- Internal AML analytics training and consultant mentoring
+- Selected for a seven-month secondment from KPMG Malaysia to support Federal Reserve-mandated system reviews for two major banks.
+- Analyzed approximately five million transactions and semi-structured SWIFT and CHIPS messages, automatically identifying record mismatches and suspicious messaging patterns using agreed investigation rules.
+- Built reusable pure-Python assessment and SQL-building modules in three days for hardened client environments, replacing days of manual scanning and validation with automated exception detection.
+- Added programmable tests for edge cases and calibration, and reused components across both bank reviews.
+- Trained five colleagues ranging from Associate to Director level and mentored two consultants on program efficiency and code quality.
 
-**Evidence still needed:** Confirm secondment structure, number and scale of engagements, data volumes, time saved, module adoption, mentee count, and engagement outcomes.
+**Status:** Complete enough for first CV draft. Present as a KPMG US secondment beneath KPMG Malaysia to make the overlapping dates clear.
 
 ### KPMG Malaysia
 
 #### Advisory Manager | Dec 2016–Dec 2018
 
-**Known themes**
+**Draft achievement bank**
 
-- Led analytics workstreams for multinational banks and manufacturers
-- Investigative, ethics, and compliance reviews
-- Framework for structuring Bloomberg, Reuters, and email communications
-- New York secondment to develop new service lines using open-source technology
+- Led analytics delivery across six Malaysian engagements: two major banking investigations, two AML reviews for separate banks, and two manufacturing analytics projects.
+- Coordinated up to 15 engagement resources reporting through the project partner.
+- Built a pure-Python NLP framework to locally ingest, parse, normalize, classify, search, and flag approximately 25 million Bloomberg, Reuters, and email messages in the first investigation.
+- Reused the framework to complete a subsequent investigation in one month against a three-month allocation, reducing delivery time by approximately 67% and creating additional review capacity.
+- Presented investigation findings to client boards of directors for further action.
+- Earned selection for the KPMG US secondment following the success of the firm's first NLP-based investigation engagement.
 
-**Evidence still needed:** Engagement count, team size, data scale, processing improvement, clients/markets covered, and business outcomes.
+**Status:** Complete enough for first CV draft.
 
 ### AIA Bhd.
 
 #### Data Analyst | Nov 2012–Nov 2016
 
-**Known measurable evidence**
+**Draft achievement bank**
 
-- Implemented the organization's first cross-functional Tableau analytics deployment.
-- Designed SQL pipelines for operational, sales, and cost KPIs.
-- Improved reporting and process turnaround by up to 10× through VBA and SQL automation.
+- Led procurement and implementation of the organization's first cross-functional Tableau deployment, initially supporting approximately 50 users across operational reporting, claims processing, and pricing before broader adoption.
+- Built more than 10 loss-ratio, executive, corporate-health, claims-monitoring, and internal operations reports for major clients and business stakeholders.
+- Designed extraction, processing, and visualization pipelines across four source systems covering claims, client profiles, premiums, and claims transactions.
+- Accelerated recurring report production by up to 10× through Python, SQL, and VBA automation that removed routine human intervention.
+- Served as the internal Tableau expert, delivering user walkthroughs and guiding dashboard development.
+- Selected as a key analyst during the ING–AIA Corporate Solutions integration.
+- Took on operational planning for an eight-person corporate call-centre team and reduced average customer waiting time by 30% within three months through reporting and resource planning.
 
-**Evidence still needed:** Dashboard/user count, departments supported, refresh frequency, data scale, automation hours saved, and stakeholder scope.
+**Technology:** Tableau, SQL Server, Microsoft Access, Python, SQL, VBA
+
+**Status:** Complete enough for first CV draft.
 
 ## Skills Inventory
 
@@ -139,9 +148,7 @@ Technology leader with experience spanning enterprise data architecture, AI and 
 
 ## Remaining Build Sequence
 
-1. Complete KPMG US evidence.
-2. Complete KPMG Malaysia evidence.
-3. Complete AIA Bhd. evidence.
-4. Collect education, certifications, contact details, languages, awards, publications, and professional affiliations.
-5. Select a primary role target and produce a comprehensive master CV.
-6. Derive a concise two-page insurance data-technology CV from the master version.
+1. Collect education, certifications, contact details, languages, awards, publications, and professional affiliations.
+2. Confirm the preferred seniority and role-title targets within insurance data technology.
+3. Produce a comprehensive master CV.
+4. Derive a concise two-page insurance data-technology CV from the master version.
