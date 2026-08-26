@@ -132,7 +132,7 @@
       }
 
       .role {
-        margin-bottom: 4.5mm;
+        margin-bottom: 3.8mm;
       }
 
       .role:last-child {
@@ -172,11 +172,11 @@
       }
 
       li {
-        margin: 0 0 1.3mm;
+        margin: 0 0 1.15mm;
         padding-left: 0.5mm;
         color: #43505c;
-        font-size: 8pt;
-        line-height: 1.36;
+        font-size: 7.6pt;
+        line-height: 1.32;
       }
 
       li::marker {
@@ -292,9 +292,10 @@
               </div>
               <div class="role-sub">Technology Innovation Lead</div>
               <ul>
-                <li>Re-architected a four-service Azure research solution into one containerized AWS web application within a month, supporting four data sources and enabling planned Azure decommissioning.</li>
-                <li>Built a natural-language analytics PoC in three months, orchestrating schema discovery, RAG, SQL generation, validation, execution, and AI visualization for permission-controlled data.</li>
-                <li>Led the Architecture Review Board-approved design of a Kong enterprise API and AI gateway intended to support up to 100M transactions, coordinating vendor teams of 15–20 engineers.</li>
+                <li>Re-architected a four-service Azure data-fetching solution into one containerized AWS application within a month, preserving performance across four sources while improving usability and error visibility.</li>
+                <li>Built a natural-language analytics PoC in three months for five pilot users, orchestrating schema discovery, RAG, SQL generation, validation, execution, and AI visualization over permission-controlled warehouse data.</li>
+                <li>Developed a multi-agent risk-profiling PoC that processed up to thousands of external articles per run and attached confidence scores and evidence to semantic risk tags.</li>
+                <li>Led the Architecture Review Board-approved design of an enterprise API and AI gateway for up to 100M transactions, covering semantic caching, observability, routing, fallback, and model controls.</li>
               </ul>
             </div>
 
@@ -305,9 +306,23 @@
               </div>
               <div class="role-sub">Data Architect</div>
               <ul>
-                <li>Reviewed data flows and proposals for 10–15 projects and defined the approved enterprise medallion reference architecture.</li>
-                <li>Established secure web-scraping patterns adopted by at least five teams and built ingestion pipelines that cut retrieval from five hours to under one.</li>
+                <li>Reviewed data flows, architecture diagrams, and proposals for 10–15 projects, providing governance recommendations on secure and scalable data design.</li>
+                <li>Defined the organization’s approved medallion reference architecture and reusable patterns for ingestion, transformation, storage, and consumption.</li>
+                <li>Established secure web-scraping patterns adopted by at least five teams and built concurrent Python ingestion pipelines that cut retrieval from five hours to under one.</li>
                 <li>Delivered architecture and AI knowledge-sharing sessions for audiences ranging from 25 to more than 300 people.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">MCM Worldwide</div>
+                <div class="role-date">Jul 2022–Oct 2023</div>
+              </div>
+              <div class="role-sub">Principal Data Architect</div>
+              <ul>
+                <li>Delivered Global Finance and CEO dashboards across five countries, supported by pipelines spanning the enterprise SQL Server data warehouse.</li>
+                <li>Created optimized warehouse views that improved data accuracy and reduced Power BI query response from minutes to seconds.</li>
+                <li>Introduced modular patterns across 20–30 dashboard and query-performance components and led two BI specialists.</li>
               </ul>
             </div>
 
@@ -318,8 +333,9 @@
               </div>
               <div class="role-sub">Associate Director · Senior Manager, Health &amp; Wellness</div>
               <ul>
-                <li>Delivered five digital health programs for three enterprise clients covering 6,000+ employees, increasing adoption by 25 percentage points.</li>
-                <li>Productionized 90%-accurate OCR for scoped claims, replacing 25% of manual quality-assurance workload.</li>
+                <li>Combined claims, health-program, engagement, and participant data for weekly reporting and quarterly wellness-planning analysis across three clients and 6,000+ employees.</li>
+                <li>Increased program adoption by 25 percentage points; analysis associated participation with 5–10% lower claims costs.</li>
+                <li>Productionized 90%-accurate Azure OCR for scoped claims, replacing 25% of manual QA workload, and developed NLP-based keyword categorization for health data.</li>
                 <li>Built business cases covering US$3M in analytics capability, US$1M in application development, and multiple PoCs.</li>
               </ul>
             </div>
@@ -331,8 +347,21 @@
               </div>
               <div class="role-sub">Advisory Manager · Consultant, US Secondment</div>
               <ul>
-                <li>Built a pure-Python NLP framework to process approximately 25M Bloomberg, Reuters, and email messages for a major financial investigation.</li>
-                <li>Reused the framework to complete a later investigation in one month against a three-month allocation, reducing delivery time by 67%.</li>
+                <li>Built a pure-Python NLP framework to ingest, normalize, classify, search, and flag approximately 25M Bloomberg, Reuters, and email messages.</li>
+                <li>Reused the framework to finish a later investigation in one month against a three-month allocation, reducing delivery time by 67%.</li>
+                <li>During a US secondment, analyzed approximately 5M transactions plus SWIFT and CHIPS messages and built reusable Python and SQL assessment modules.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">AIA Bhd.</div>
+                <div class="role-date">Nov 2012–Nov 2016</div>
+              </div>
+              <div class="role-sub">Data Analyst</div>
+              <ul>
+                <li>Led the first cross-functional Tableau deployment for approximately 50 users and built 10+ executive, claims, pricing, and operations reports.</li>
+                <li>Designed pipelines across four source systems and accelerated recurring reporting by up to 10× through Python, SQL, and VBA automation.</li>
               </ul>
             </div>
           </section>
@@ -352,45 +381,33 @@
               </div>
             </div>
 
-            <div class="sidebar-card teal">
-              <div class="sidebar-heading">Earlier career</div>
-              <div class="sidebar-text">
-                <strong>MCM Worldwide · Principal Data Architect</strong><br />
-                Delivered finance and CEO dashboards across five countries and reduced query
-                response from minutes to seconds.<br /><br />
-                <strong>AIA Bhd. · Data Analyst</strong><br />
-                Led the first cross-functional Tableau deployment and accelerated recurring
-                reporting by up to 10×.
-              </div>
-            </div>
-
             <div class="sidebar-card">
-              <div class="sidebar-heading">Core stack</div>
+              <div class="sidebar-heading">Core data stack</div>
               <div class="skills">
                 <span class="skill">Python</span>
                 <span class="skill">SQL</span>
-                <span class="skill">TypeScript</span>
-                <span class="skill">Next.js</span>
-                <span class="skill">FastAPI</span>
-                <span class="skill">AWS</span>
-                <span class="skill">Azure</span>
                 <span class="skill">Databricks</span>
+                <span class="skill">SQL Server</span>
                 <span class="skill">Power BI</span>
                 <span class="skill">Tableau</span>
+                <span class="skill">SAS</span>
                 <span class="skill">D3.js</span>
-                <span class="skill">Kong</span>
-                <span class="skill">Docker</span>
-                <span class="skill">Kubernetes</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Azure</span>
+                <span class="skill">Data Pipelines</span>
+                <span class="skill">Medallion</span>
                 <span class="skill">LLMs</span>
                 <span class="skill">RAG</span>
+                <span class="skill">NLP</span>
+                <span class="skill">OCR</span>
               </div>
             </div>
 
             <div class="sidebar-card teal">
               <div class="sidebar-heading">Best-fit focus</div>
               <div class="focus">
-                Enterprise data architecture · AI strategy &amp; delivery · Financial services ·
-                Analytics platforms · Solution architecture · Digital transformation
+                Enterprise data architecture · Data platforms · Data governance · Data engineering ·
+                AI &amp; analytics · Financial and insurance data
               </div>
             </div>
           </aside>
