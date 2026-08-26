@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syed Ayan Ali — One-Page Profile</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #17202a;
+        --muted: #52606d;
+        --navy: #102a43;
+        --blue: #1363df;
+        --cyan: #14b8a6;
+        --line: #d9e2ec;
+        --pale: #f4f8fc;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e8edf3;
+        color: var(--ink);
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        overflow: hidden;
+        background: var(--white);
+        position: relative;
+      }
+
+      .topbar {
+        height: 5mm;
+        background: linear-gradient(90deg, var(--blue), var(--cyan));
+      }
+
+      header {
+        padding: 10mm 13mm 7mm;
+        background: var(--navy);
+        color: var(--white);
+      }
+
+      .name {
+        margin: 0;
+        font-size: 27pt;
+        line-height: 1;
+        letter-spacing: -0.7px;
+        font-weight: 750;
+      }
+
+      .title {
+        margin-top: 3mm;
+        color: #9fddff;
+        font-size: 10.5pt;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.2mm 5mm;
+        margin-top: 4.8mm;
+        font-size: 8.2pt;
+        color: #e6eef7;
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      main {
+        padding: 8mm 13mm 9mm;
+      }
+
+      .summary {
+        margin: 0;
+        font-size: 10pt;
+        line-height: 1.48;
+        color: #34495e;
+      }
+
+      .summary strong {
+        color: var(--navy);
+      }
+
+      .section-title {
+        margin: 7mm 0 3.5mm;
+        color: var(--navy);
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+      }
+
+      .section-title::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.8mm;
+      }
+
+      .metric {
+        min-height: 23mm;
+        padding: 3.3mm 3.5mm;
+        border-top: 2.2px solid var(--blue);
+        background: var(--pale);
+      }
+
+      .metric:nth-child(even) {
+        border-top-color: var(--cyan);
+      }
+
+      .metric-value {
+        color: var(--navy);
+        font-size: 16pt;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+
+      .metric-label {
+        margin-top: 2.2mm;
+        color: var(--muted);
+        font-size: 7.2pt;
+        line-height: 1.3;
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 1.73fr 1fr;
+        gap: 8mm;
+        align-items: start;
+      }
+
+      .role {
+        margin-bottom: 4mm;
+      }
+
+      .role:last-child {
+        margin-bottom: 0;
+      }
+
+      .role-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+        align-items: baseline;
+      }
+
+      .role-name {
+        color: var(--navy);
+        font-size: 9.2pt;
+        font-weight: 800;
+      }
+
+      .role-date {
+        flex: 0 0 auto;
+        color: #73808c;
+        font-size: 7pt;
+        font-weight: 600;
+      }
+
+      .role-sub {
+        margin-top: 0.8mm;
+        color: var(--blue);
+        font-size: 7.6pt;
+        font-weight: 700;
+      }
+
+      ul {
+        margin: 1.8mm 0 0;
+        padding-left: 4mm;
+      }
+
+      li {
+        margin: 0 0 1.3mm;
+        padding-left: 0.5mm;
+        color: #43505c;
+        font-size: 7.6pt;
+        line-height: 1.36;
+      }
+
+      li::marker {
+        color: var(--cyan);
+      }
+
+      .sidebar-card {
+        margin-bottom: 4mm;
+        padding: 4mm;
+        background: var(--pale);
+        border-left: 2.3px solid var(--blue);
+      }
+
+      .sidebar-card.teal {
+        border-left-color: var(--cyan);
+      }
+
+      .sidebar-heading {
+        color: var(--navy);
+        font-size: 8.3pt;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .sidebar-text {
+        margin-top: 1.5mm;
+        color: var(--muted);
+        font-size: 7.3pt;
+        line-height: 1.4;
+      }
+
+      .award {
+        margin-top: 2.4mm;
+        color: var(--blue);
+        font-size: 7.3pt;
+        line-height: 1.38;
+        font-weight: 700;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+        margin-top: 2.5mm;
+      }
+
+      .skill {
+        padding: 1.1mm 1.7mm;
+        border: 1px solid #c8d5e2;
+        border-radius: 3mm;
+        background: var(--white);
+        color: #334e68;
+        font-size: 6.6pt;
+        font-weight: 650;
+      }
+
+      .focus {
+        margin-top: 2mm;
+        color: var(--muted);
+        font-size: 7.2pt;
+        line-height: 1.42;
+      }
+
+      footer {
+        position: absolute;
+        right: 13mm;
+        bottom: 5mm;
+        left: 13mm;
+        color: #8492a0;
+        font-size: 6.5pt;
+        text-align: right;
+      }
+
+      @media print {
+        html,
+        body {
+          background: var(--white);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <div class="topbar"></div>
+      <header>
+        <h1 class="name">Syed Ayan Ali</h1>
+        <div class="title">AI Automation &amp; Software Engineer</div>
+        <div class="contact">
+          <span>Hong Kong</span>
+          <a href="tel:+85297537220">+852 9753 7220</a>
+          <a href="mailto:syedayanali28@gmail.com">syedayanali28@gmail.com</a>
+          <a href="https://github.com/syedayanali28">github.com/syedayanali28</a>
+          <a href="https://www.linkedin.com/in/syedayanali/">linkedin.com/in/syedayanali</a>
+        </div>
+      </header>
+
+      <main>
+        <p class="summary">
+          <strong>Outcome-focused engineer building agentic AI, automation, and data products</strong>
+          for financial services and operational teams. Combines hands-on Python and cloud engineering
+          with product thinking—turning complex workflows into secure, measurable systems that reduce
+          cost, accelerate decisions, and improve conversion.
+        </p>
+
+        <div class="section-title">Selected impact</div>
+        <section class="metrics" aria-label="Selected impact">
+          <div class="metric">
+            <div class="metric-value">HK$300K</div>
+            <div class="metric-label">saved by replacing a vendor data-validation solution</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">30 hrs</div>
+            <div class="metric-label">saved monthly through agentic firewall-review automation</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">3×</div>
+            <div class="metric-label">quote-to-booking conversion from automated follow-up</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">99%</div>
+            <div class="metric-label">lower price-retrieval latency with a custom routing engine</div>
+          </div>
+        </section>
+
+        <div class="columns">
+          <section>
+            <div class="section-title">Experience highlights</div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Hong Kong Monetary Authority</div>
+                <div class="role-date">Jul 2025–Present</div>
+              </div>
+              <div class="role-sub">Analyst Programmer · Business Enablement &amp; Software Architecture</div>
+              <ul>
+                <li>Built an n8n agentic chatbot using RAG across a 2,000-PDF knowledge base for BRDR document search.</li>
+                <li>Designed a Python data-validation framework for internal pipelines, test workflows, and AWS Lambda deployment, avoiding HK$300K in vendor cost.</li>
+                <li>Automated firewall reviews with Python, LLM-ready policy validation, and JIRA/Confluence MCP integrations, saving the security team 30 hours per month.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Jay Cee Ess Global</div>
+                <div class="role-date">Aug 2025–Present</div>
+              </div>
+              <div class="role-sub">Software Engineer · Remote, Australia-based</div>
+              <ul>
+                <li>Helped revamp a legacy site into a high-performance web app, supporting AUD100K monthly revenue and a 200% increase in user intake.</li>
+                <li>Created OpenAI, Slack, and Gmail follow-up workflows in Power Automate, tripling quote-to-booking conversion.</li>
+                <li>Engineered an in-memory routing engine using Yen’s K-Shortest Paths algorithm, cutting price-retrieval latency by 99%.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Universal Innotech Group</div>
+                <div class="role-date">Sep 2024–May 2025</div>
+              </div>
+              <div class="role-sub">Junior Software Engineer</div>
+              <ul>
+                <li>Built a Neo4j graph layer for KYC identity resolution, reaching 99% accuracy and reducing processing from two days to under one hour.</li>
+                <li>Maintained 10+ serverless ETL pipelines using Python, AWS Bedrock, and Step Functions for 50,000+ records.</li>
+                <li>Created a Gold Dataset-based framework to benchmark 10+ AI agents for accuracy, reliability, and P99 latency.</li>
+              </ul>
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-title">Profile</div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">City University of Hong Kong</div>
+              <div class="sidebar-text">
+                BSc Computer Science<br />
+                Minor in Business Intelligence · 2026
+              </div>
+              <div class="award">
+                HK$720K International Student Top Scholarship<br />
+                Dean’s List · 3× Tiger Talent Program
+              </div>
+            </div>
+
+            <div class="sidebar-card teal">
+              <div class="sidebar-heading">Additional proof points</div>
+              <div class="sidebar-text">
+                Trained a real-time YOLOv8 fire-and-smoke detection model to 99% accuracy.
+                Built computer-vision and sentiment-processing workflows with TensorFlow and OpenCV.
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Core stack</div>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Bedrock</span>
+                <span class="skill">Lambda</span>
+                <span class="skill">Step Functions</span>
+                <span class="skill">n8n</span>
+                <span class="skill">Power Automate</span>
+                <span class="skill">Neo4j</span>
+                <span class="skill">LangChain</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Kubernetes</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card teal">
+              <div class="sidebar-heading">Best-fit focus</div>
+              <div class="focus">
+                Agentic AI · Workflow automation · Applied ML · Data engineering ·
+                Cloud-native systems · Financial technology · Product engineering
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <footer>Selected highlights distilled from the full résumé</footer>
+    </article>
+  </body>
+</html>
