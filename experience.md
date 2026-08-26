@@ -30,8 +30,8 @@ Extracted from LinkedIn experience details. Roles are listed most recent first. 
 | Field | Value |
 | --- | --- |
 | Start | Nov 2023 |
-| End | Apr 2024 |
-| Tenure | 6 mos |
+| End | Jun 2025 |
+| Tenure | 1 yr 8 mos |
 | Location | Hong Kong SAR |
 | Work arrangement | On-site |
 
