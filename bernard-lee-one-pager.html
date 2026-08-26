@@ -11,13 +11,13 @@
       }
 
       :root {
-        --ink: #17202a;
-        --muted: #52606d;
-        --navy: #102a43;
-        --blue: #1363df;
-        --cyan: #14b8a6;
-        --line: #d9e2ec;
-        --pale: #f4f8fc;
+        --ink: #171717;
+        --muted: #555555;
+        --navy: #171717;
+        --blue: #2f2f2f;
+        --cyan: #777777;
+        --line: #cfcfcf;
+        --pale: #ffffff;
         --white: #ffffff;
       }
 
@@ -49,14 +49,14 @@
       }
 
       .topbar {
-        height: 5mm;
-        background: linear-gradient(90deg, var(--blue), var(--cyan));
+        display: none;
       }
 
       header {
-        padding: 10mm 13mm 7mm;
-        background: var(--navy);
-        color: var(--white);
+        padding: 11mm 13mm 6mm;
+        background: var(--white);
+        color: var(--ink);
+        border-bottom: 1.5px solid var(--ink);
       }
 
       .name {
@@ -69,7 +69,7 @@
 
       .title {
         margin-top: 3mm;
-        color: #9fddff;
+        color: var(--ink);
         font-size: 10.5pt;
         font-weight: 700;
         letter-spacing: 1.4px;
@@ -82,7 +82,7 @@
         gap: 2.2mm 5mm;
         margin-top: 4.8mm;
         font-size: 8.2pt;
-        color: #e6eef7;
+        color: var(--muted);
       }
 
       .contact a {
@@ -91,7 +91,7 @@
       }
 
       main {
-        padding: 8mm 13mm 9mm;
+        padding: 6mm 13mm 9mm;
       }
 
       .summary {
@@ -106,7 +106,7 @@
       }
 
       .section-title {
-        margin: 7mm 0 3.5mm;
+        margin: 5.5mm 0 3.5mm;
         color: var(--navy);
         font-size: 8.5pt;
         font-weight: 800;
@@ -122,38 +122,6 @@
         height: 1px;
         flex: 1;
         background: var(--line);
-      }
-
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.8mm;
-      }
-
-      .metric {
-        min-height: 23mm;
-        padding: 3.3mm 3.5mm;
-        border-top: 2.2px solid var(--blue);
-        background: var(--pale);
-      }
-
-      .metric:nth-child(even) {
-        border-top-color: var(--cyan);
-      }
-
-      .metric-value {
-        color: var(--navy);
-        font-size: 16pt;
-        line-height: 1;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-
-      .metric-label {
-        margin-top: 2.2mm;
-        color: var(--muted);
-        font-size: 7.2pt;
-        line-height: 1.3;
       }
 
       .columns {
@@ -193,7 +161,7 @@
 
       .role-sub {
         margin-top: 0.8mm;
-        color: var(--blue);
+        color: #3f3f3f;
         font-size: 7.6pt;
         font-weight: 700;
       }
@@ -212,18 +180,18 @@
       }
 
       li::marker {
-        color: var(--cyan);
+        color: #666666;
       }
 
       .sidebar-card {
         margin-bottom: 4mm;
-        padding: 4mm;
-        background: var(--pale);
-        border-left: 2.3px solid var(--blue);
+        padding: 3mm 0 0;
+        background: var(--white);
+        border-top: 1px solid var(--line);
       }
 
       .sidebar-card.teal {
-        border-left-color: var(--cyan);
+        border-top-color: var(--line);
       }
 
       .sidebar-heading {
@@ -242,7 +210,7 @@
 
       .award {
         margin-top: 2.4mm;
-        color: var(--blue);
+        color: #333333;
         font-size: 7.3pt;
         line-height: 1.38;
         font-weight: 700;
@@ -313,26 +281,6 @@
           with measurable operational and commercial outcomes.
         </p>
 
-        <div class="section-title">Selected impact</div>
-        <section class="metrics" aria-label="Selected impact">
-          <div class="metric">
-            <div class="metric-value">10–15</div>
-            <div class="metric-label">project architectures reviewed for secure, scalable design</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">5h→&lt;1h</div>
-            <div class="metric-label">external-data retrieval accelerated through Python pipelines</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">+25 pts</div>
-            <div class="metric-label">health-program adoption across enterprise clients</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">25M</div>
-            <div class="metric-label">financial communications processed by an NLP framework</div>
-          </div>
-        </section>
-
         <div class="columns">
           <section>
             <div class="section-title">Experience highlights</div>
@@ -373,6 +321,18 @@
                 <li>Delivered five digital health programs for three enterprise clients covering 6,000+ employees, increasing adoption by 25 percentage points.</li>
                 <li>Productionized 90%-accurate OCR for scoped claims, replacing 25% of manual quality-assurance workload.</li>
                 <li>Built business cases covering US$3M in analytics capability, US$1M in application development, and multiple PoCs.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">KPMG Malaysia &amp; KPMG US</div>
+                <div class="role-date">Dec 2016–Dec 2018</div>
+              </div>
+              <div class="role-sub">Advisory Manager · Consultant, US Secondment</div>
+              <ul>
+                <li>Built a pure-Python NLP framework to process approximately 25M Bloomberg, Reuters, and email messages for a major financial investigation.</li>
+                <li>Reused the framework to complete a later investigation in one month against a three-month allocation, reducing delivery time by 67%.</li>
               </ul>
             </div>
           </section>
