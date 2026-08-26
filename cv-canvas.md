@@ -19,7 +19,7 @@ Technology leader with experience spanning enterprise data architecture, AI and 
 
 ## Education
 
-**Bachelor of Engineering in Electrical and Electronics Engineering**  
+**Bachelor of Engineering in Electrical and Electronics Engineering**
 Sheffield Hallam University, delivered through First City University College, Malaysia | 2006–2010
 
 - Final-year dissertation: Lane Departure Warning System
