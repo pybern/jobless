@@ -8,9 +8,12 @@ Technology leader with experience spanning enterprise data architecture, AI and 
 
 ## Profile Details
 
+- **Email:** [b@nggdim.com](mailto:b@nggdim.com)
+- **Phone:** +852 5243 7393
 - **Location:** Hong Kong
 - **Work authorization:** Hong Kong Permanent Resident
 - **Languages:** English (fluent), Cantonese (conversational)
+- **LinkedIn:** [linkedin.com/in/bernard-lee-57042b50](https://www.linkedin.com/in/bernard-lee-57042b50/)
 - **GitHub:** [github.com/pybern](https://github.com/pybern)
 - **Stack Overflow:** [BernardL](https://stackoverflow.com/users/3288092/bernardl) — 5,400+ reputation and 95 badges as of August 2026
 
