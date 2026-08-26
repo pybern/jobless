@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bernard Lee — One-Page Profile</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #171717;
+        --muted: #555555;
+        --navy: #171717;
+        --blue: #2f2f2f;
+        --cyan: #777777;
+        --line: #cfcfcf;
+        --pale: #ffffff;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e8edf3;
+        color: var(--ink);
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        overflow: hidden;
+        background: var(--white);
+        position: relative;
+        break-after: page;
+      }
+
+      .page:last-child {
+        break-after: auto;
+      }
+
+      .page + .page {
+        margin-top: 10mm;
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      header {
+        padding: 11mm 13mm 6mm;
+        background: var(--white);
+        color: var(--ink);
+        border-bottom: 1.5px solid var(--ink);
+      }
+
+      .name {
+        margin: 0;
+        font-size: 27pt;
+        line-height: 1;
+        letter-spacing: -0.7px;
+        font-weight: 750;
+      }
+
+      .title {
+        margin-top: 3mm;
+        color: var(--ink);
+        font-size: 10.5pt;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.2mm 5mm;
+        margin-top: 4.8mm;
+        font-size: 8.2pt;
+        color: var(--muted);
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .continuation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 9mm 13mm 5mm;
+        border-bottom: 1.5px solid var(--ink);
+      }
+
+      .continuation-name {
+        font-size: 17pt;
+        font-weight: 800;
+        letter-spacing: -0.3px;
+      }
+
+      .continuation-title {
+        color: var(--muted);
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+      }
+
+      main {
+        padding: 6mm 13mm 9mm;
+      }
+
+      .summary {
+        margin: 0;
+        font-size: 10pt;
+        line-height: 1.48;
+        color: #34495e;
+      }
+
+      .summary strong {
+        color: var(--navy);
+      }
+
+      .section-title {
+        margin: 5.5mm 0 3.5mm;
+        color: var(--navy);
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+      }
+
+      .section-title::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 1.73fr 1fr;
+        gap: 8mm;
+        align-items: start;
+      }
+
+      .role {
+        margin-bottom: 3.8mm;
+      }
+
+      .role:last-child {
+        margin-bottom: 0;
+      }
+
+      .role-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+        align-items: baseline;
+      }
+
+      .role-name {
+        color: var(--navy);
+        font-size: 9.2pt;
+        font-weight: 800;
+      }
+
+      .role-date {
+        flex: 0 0 auto;
+        color: #73808c;
+        font-size: 7pt;
+        font-weight: 600;
+      }
+
+      .role-sub {
+        margin-top: 0.8mm;
+        color: #3f3f3f;
+        font-size: 7.6pt;
+        font-weight: 700;
+      }
+
+      ul {
+        margin: 1.8mm 0 0;
+        padding-left: 4mm;
+      }
+
+      li {
+        margin: 0 0 1.15mm;
+        padding-left: 0.5mm;
+        color: #43505c;
+        font-size: 7.6pt;
+        line-height: 1.32;
+      }
+
+      li::marker {
+        color: #666666;
+      }
+
+      .sidebar-card {
+        margin-bottom: 4mm;
+        padding: 3mm 0 0;
+        background: var(--white);
+        border-top: 1px solid var(--line);
+      }
+
+      .sidebar-card.teal {
+        border-top-color: var(--line);
+      }
+
+      .sidebar-heading {
+        color: var(--navy);
+        font-size: 8.3pt;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .sidebar-text {
+        margin-top: 1.5mm;
+        color: var(--muted);
+        font-size: 7.7pt;
+        line-height: 1.4;
+      }
+
+      .award {
+        margin-top: 2.4mm;
+        color: #333333;
+        font-size: 7.3pt;
+        line-height: 1.38;
+        font-weight: 700;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+        margin-top: 2.5mm;
+      }
+
+      .skill {
+        padding: 1.1mm 1.7mm;
+        border: 1px solid #c8d5e2;
+        border-radius: 3mm;
+        background: var(--white);
+        color: #334e68;
+        font-size: 6.9pt;
+        font-weight: 650;
+      }
+
+      .focus {
+        margin-top: 2mm;
+        color: var(--muted);
+        font-size: 7.2pt;
+        line-height: 1.42;
+      }
+
+      footer {
+        position: absolute;
+        right: 13mm;
+        bottom: 5mm;
+        left: 13mm;
+        color: #8492a0;
+        font-size: 6.5pt;
+        text-align: right;
+      }
+
+      @media print {
+        html,
+        body {
+          background: var(--white);
+        }
+
+        .page + .page {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <header>
+        <h1 class="name">Bernard Lee</h1>
+        <div class="title">Data Technology &amp; AI Leader</div>
+        <div class="contact">
+          <span>Hong Kong</span>
+          <a href="tel:+85252437393">+852 5243 7393</a>
+          <a href="mailto:b@nggdim.com">b@nggdim.com</a>
+          <a href="https://github.com/pybern">github.com/pybern</a>
+          <a href="https://www.linkedin.com/in/bernard-lee-57042b50/">linkedin.com/in/bernard-lee-57042b50</a>
+        </div>
+      </header>
+
+      <main>
+        <p class="summary">
+          <strong>Technology leader spanning enterprise data architecture, AI, analytics, and digital delivery.</strong>
+          Combines hands-on engineering with architecture governance, business-case development, and
+          cross-functional leadership—translating complex business needs into secure, scalable data
+          platforms with measurable operational and commercial outcomes.
+        </p>
+
+        <div class="columns">
+          <section>
+            <div class="section-title">Recent data leadership</div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Hong Kong Monetary Authority</div>
+                <div class="role-date">Jul 2025–Present</div>
+              </div>
+              <div class="role-sub">Technology Innovation Lead</div>
+              <ul>
+                <li>Re-architected and migrated a four-service Azure research data-fetching solution into one containerized AWS web application within a month, supporting four sources while preserving performance and improving usability and error visibility.</li>
+                <li>Built an end-to-end natural-language analytics PoC in three months for five pilot users, enabling permission-controlled warehouse querying and AI-generated visualizations.</li>
+                <li>Orchestrated schema-discovery, RAG, SQL-generation, validation, execution, and visualization agents, targeting a shift from an estimated three-day Data CoE handoff to near-real-time self-service.</li>
+                <li>Developed a multi-agent risk-profiling PoC that processed up to thousands of external articles per run and attached confidence scores and evidence to semantic risk tags.</li>
+                <li>Led the Architecture Review Board-approved design of an enterprise API and AI gateway for up to 100M transactions, covering semantic caching, observability, routing, fallback, cost, and model controls.</li>
+                <li>Coordinated vendor teams of up to 15–20 engineers while defining authentication, security, and scalable data-access requirements across Kubernetes and VM services.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Hong Kong Monetary Authority</div>
+                <div class="role-date">Nov 2023–Jun 2025</div>
+              </div>
+              <div class="role-sub">Data Architect</div>
+              <ul>
+                <li>Reviewed data flows, architecture diagrams, and proposals for 10–15 projects, providing Architecture Review Board recommendations on secure, scalable data design.</li>
+                <li>Defined the organization’s medallion data architecture, approved as part of the enterprise reference architecture, with reusable patterns across ingestion, transformation, storage, and consumption.</li>
+                <li>Established secure proxy-based web-scraping and monitoring patterns adopted by at least five teams and projects retrieving external data.</li>
+                <li>Developed Python reference implementations and concurrent ingestion pipelines that reduced external-data retrieval from five hours to under one.</li>
+                <li>Delivered two webinars and an in-person session on data architecture and AI for audiences ranging from 25 to more than 300 people.</li>
+              </ul>
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-title">Data profile</div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Core data stack</div>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Databricks</span>
+                <span class="skill">SQL Server</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">SAS</span>
+                <span class="skill">D3.js</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Azure</span>
+                <span class="skill">Data Pipelines</span>
+                <span class="skill">Medallion</span>
+                <span class="skill">LLMs</span>
+                <span class="skill">RAG</span>
+                <span class="skill">NLP</span>
+                <span class="skill">OCR</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Architecture &amp; governance</div>
+              <div class="sidebar-text">
+                Enterprise data architecture · Architecture Review Board · Data governance ·
+                Medallion design · Data-access controls · Secure ingestion · API and AI gateways ·
+                Cloud migration · Reference implementations
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Data &amp; AI delivery</div>
+              <div class="sidebar-text">
+                Data ingestion · Warehousing · BI · Claims analytics · Financial-crime analytics ·
+                Natural-language-to-SQL · Multi-agent orchestration · NLP · OCR · Executive reporting
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Education &amp; details</div>
+              <div class="sidebar-text">
+                <strong>BEng Electrical &amp; Electronics Engineering</strong><br />
+                Sheffield Hallam University<br />
+                First City University College · 2010
+              </div>
+              <div class="award">
+                Hong Kong Permanent Resident<br />
+                English · Cantonese
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Best-fit focus</div>
+              <div class="focus">
+                Enterprise data architecture · Data platforms · Data governance · Data engineering ·
+                AI &amp; analytics · Financial and insurance data
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <footer>Bernard Lee · Data Technology &amp; AI Leader · 1 / 2</footer>
+    </article>
+
+    <article class="page">
+      <div class="continuation-header">
+        <div class="continuation-name">Bernard Lee</div>
+        <div class="continuation-title">Data Technology &amp; AI Leader</div>
+      </div>
+
+      <main>
+        <div class="columns">
+          <section>
+            <div class="section-title">Data &amp; analytics experience</div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">MCM Worldwide</div>
+                <div class="role-date">Jul 2022–Oct 2023</div>
+              </div>
+              <div class="role-sub">Principal Data Architect</div>
+              <ul>
+                <li>Delivered Global Finance and CEO dashboards covering sales indicators and KPIs across five countries, supported by pipelines spanning the enterprise SQL Server data warehouse.</li>
+                <li>Created optimized warehouse views that improved data accuracy and reduced Power BI query response from minutes to seconds.</li>
+                <li>Introduced modular design patterns across 20–30 dashboard and query-performance components, supporting a broader framework of up to 20 dashboards.</li>
+                <li>Led two BI specialists and five workshops for 30–50 global participants on dashboard usability, data availability, and adoption.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">AIA Hong Kong &amp; Macau</div>
+                <div class="role-date">Jan 2019–Jul 2022</div>
+              </div>
+              <div class="role-sub">Associate Director · Senior Manager, Health &amp; Wellness</div>
+              <ul>
+                <li>Delivered five customer-partnered digital health programs for three enterprise clients representing more than 6,000 employees.</li>
+                <li>Combined claims, health-program, engagement, and participant data for weekly reporting and quarterly wellness-planning analysis.</li>
+                <li>Increased program adoption by 25 percentage points; health-program analysis associated participation with 5–10% lower claims costs.</li>
+                <li>Productionized a 90%-accurate Azure OCR capability for scoped claims, replacing 25% of manual claims QA workload, and developed NLP-based keyword categorization for health data.</li>
+                <li>Built business cases covering US$3M in analytics capability, US$1M in application development, and multiple US$60K PoCs.</li>
+                <li>Coordinated internal data, IT, finance, and business teams plus 3–4 implementation partners across full user journeys and technical delivery.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">KPMG Malaysia &amp; KPMG US</div>
+                <div class="role-date">Dec 2016–Dec 2018</div>
+              </div>
+              <div class="role-sub">Advisory Manager · Consultant, US Secondment</div>
+              <ul>
+                <li>Led analytics delivery across six Malaysian engagements spanning banking investigations, AML reviews, and manufacturing analytics.</li>
+                <li>Built a pure-Python NLP framework to ingest, parse, normalize, classify, search, and flag approximately 25M Bloomberg, Reuters, and email messages.</li>
+                <li>Reused the framework to finish a later investigation in one month against a three-month allocation, reducing delivery time by approximately 67%.</li>
+                <li>During a US secondment, analyzed approximately 5M transactions plus semi-structured SWIFT and CHIPS messages for two major banks.</li>
+                <li>Built reusable Python assessment and SQL-generation modules for hardened environments and trained five colleagues in their use.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">AIA Bhd.</div>
+                <div class="role-date">Nov 2012–Nov 2016</div>
+              </div>
+              <div class="role-sub">Data Analyst</div>
+              <ul>
+                <li>Led procurement and implementation of the first cross-functional Tableau deployment, initially supporting approximately 50 users across reporting, claims, and pricing.</li>
+                <li>Built 10+ loss-ratio, executive, corporate-health, claims-monitoring, and operations reports for major clients and business stakeholders.</li>
+                <li>Designed extraction, processing, and visualization pipelines across four source systems covering claims, client profiles, premiums, and transactions.</li>
+                <li>Accelerated recurring report production by up to 10× through Python, SQL, and VBA automation.</li>
+                <li>Used operational reporting and resource planning to reduce average call-centre waiting time by 30% within three months.</li>
+              </ul>
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-title">Capability summary</div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Enterprise architecture</div>
+              <div class="sidebar-text">
+                Data strategy and reference architecture; project design review; hybrid-cloud patterns;
+                data governance; security and access; reusable standards; vendor coordination.
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Data engineering</div>
+              <div class="sidebar-text">
+                Concurrent ingestion; web and external-data retrieval; ETL and transformation;
+                warehouse views; multi-source pipelines; performance optimization; cloud migration.
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Analytics &amp; BI</div>
+              <div class="sidebar-text">
+                Executive and finance dashboards; claims and wellness analytics; engagement reporting;
+                financial investigations; AML analytics; operational planning; global BI adoption.
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">AI for data</div>
+              <div class="sidebar-text">
+                Natural-language analytics; schema discovery; RAG; SQL generation and validation;
+                multi-agent research; semantic tagging; NLP; OCR; confidence and evidence design.
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Leadership scope</div>
+              <div class="sidebar-text">
+                Architecture governance for 10–15 projects · Vendor teams of 15–20 engineers ·
+                Two BI direct reports · Workshops for 30–50 global participants ·
+                Knowledge sessions reaching 300+ attendees
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-heading">Commercial scope</div>
+              <div class="sidebar-text">
+                Business cases covering US$3M in analytics capability, US$1M in application development,
+                and multiple US$60K proof-of-concepts.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <footer>Bernard Lee · Data Technology &amp; AI Leader · 2 / 2</footer>
+    </article>
+  </body>
+</html>
