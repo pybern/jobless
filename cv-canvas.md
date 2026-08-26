@@ -6,6 +6,23 @@
 
 Technology leader with experience spanning enterprise data architecture, AI and agentic applications, analytics platforms, digital health, claims automation, financial-crime analytics, and executive reporting. Combines hands-on full-stack development with architecture leadership, business-case development, vendor coordination, and enterprise adoption.
 
+## Profile Details
+
+- **Location:** Hong Kong
+- **Work authorization:** Hong Kong Permanent Resident
+- **Languages:** English (fluent), Cantonese (conversational)
+- **GitHub:** [github.com/pybern](https://github.com/pybern)
+- **Stack Overflow:** [BernardL](https://stackoverflow.com/users/3288092/bernardl) — 5,400+ reputation and 95 badges as of August 2026
+
+## Education
+
+**Bachelor of Engineering in Electrical and Electronics Engineering**  
+Sheffield Hallam University, delivered through First City University College, Malaysia | 2006–2010
+
+- Final-year dissertation: Lane Departure Warning System
+- College basketball representative
+- Degree classification intentionally omitted
+
 ## Evidence Snapshot
 
 | Theme | Evidence collected |
@@ -148,7 +165,7 @@ Technology leader with experience spanning enterprise data architecture, AI and 
 
 ## Remaining Build Sequence
 
-1. Collect education, certifications, contact details, languages, awards, publications, and professional affiliations.
+1. Collect preferred contact details, awards, publications, and professional affiliations.
 2. Confirm the preferred seniority and role-title targets within insurance data technology.
 3. Produce a comprehensive master CV.
 4. Derive a concise two-page insurance data-technology CV from the master version.
